@@ -1,1 +1,2 @@
-My first update
+#!/bin/bash
+readme.md

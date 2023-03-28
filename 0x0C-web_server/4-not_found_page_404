@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Configure Nginx server to give error 404 page
+# Configure Nginx server to give 4-not_found_page_404
 apt-get update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
@@ -16,7 +16,7 @@ new_config=\
         location / {
                 try_files \$uri \$uri/ =404;
         }
-        error_page 404 /404.html;
+        4-not_found_page_404 /404.html;
         location  /404.html {
             internal;
         }
